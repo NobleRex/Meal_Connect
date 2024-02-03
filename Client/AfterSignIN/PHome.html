@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Pickup Home</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+        <!----------------------------- Navbar ----------------------------------->
+
+
+        <nav class="nav">
+            <div class="nav-logo">
+                <a href="#" class="link"><p>LOGO .</p></a>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">DASHBOARD</button>
+                <button class="btn" id="registerBtn" onclick="register()">HISTORY</button>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a data-modal-target="#modal" style="cursor: pointer;" class="link">View</a></li>
+                    <li><a style="cursor: pointer;" class="link">Logout</a></li>
+                </ul>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+
+        <!----------------------------- MODAL ----------------------------------->
+
+
+        <div class="modal" id="modal">
+            <div class="modal-header">
+              <div class="title">Food Items Available</div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="table" id="customers_table">
+                    <section class="table__body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th> Food Id <span class="icon-arrow"></span></th>
+                                    <th> Restaurant ID <span class="icon-arrow"></span></th>
+                                    <th> Item <span class="icon-arrow"></span></th>
+                                    <th> Quantity <span class="icon-arrow"></span></th>
+                                    <th> Charity ID <span class="icon-arrow"></span></th>
+                                    <th> Action <span class="icon-arrow"></span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 1 </td>
+                                    <td> Veg </td>
+                                    <td> Masala Dosa </td>
+                                    <td> 2 </td>
+                                    <td>
+                                        2
+                                    </td>
+                                    <td> 
+                                        <i class='bx bx-check'></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="overlay"></div>
+
+
+        <!----------------------------- Home ----------------------------------->
+
+
+        <div class="form-box">
+
+
+            <!-------------------  Dashboard -------------------------->
+
+
+            <div class="login-container" id="login">
+                <div class="top">
+                    <span>Your Unique Schedule ID : </span>
+                    <header>Hi Delivery Agent's Name</header>
+                    <div class="table" id="customers_table">
+                        <section class="table__body">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th> Food Id <span class="icon-arrow"></span></th>
+                                        <th> Category <span class="icon-arrow"></span></th>
+                                        <th> Item <span class="icon-arrow"></span></th>
+                                        <th> Quantity <span class="icon-arrow"></span></th>
+                                        <th> Status <span class="icon-arrow"></span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> 1 </td>
+                                        <td> Veg </td>
+                                        <td> Masala Dosa </td>
+                                        <td> 2 </td>
+                                        <td>
+                                            <div class="one">
+                                                <input type="checkbox" id="Delivery-check">
+                                                <label for="Delivery-check"> Delivered</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+
+            <!------------------- History -------------------------->
+
+            
+            <div class="register-container" id="register">
+                <div class="table" id="customers_table">
+                    <section>
+                        <header>DISTRIBUTION HISTORY</header>                       
+                    </section>
+                    <section class="table__body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th> Distribution Id <span class="icon-arrow"></span></th>
+                                    <th> Restaurant Id <span class="icon-arrow"></span></th>
+                                    <th> Food Id <span class="icon-arrow"></span></th>
+                                    <th> Charity ID <span class="icon-arrow"></span></th>
+                                    <th> Date <span class="icon-arrow"></span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 1 </td>
+                                    <td> 2 </td>
+                                    <td> 2  </td>
+                                    <td> 2 </td>
+                                    <td>
+                                        12-01-2024
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
